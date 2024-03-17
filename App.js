@@ -1,14 +1,33 @@
-import * as React from 'react';
-import { AppRegistry } from 'react-native';
-import { PaperProvider } from 'react-native-paper';
-import { name as appName } from './app.json';import AppNavigator from './src/navigation';
+import * as React from "react";
+import AppNavigator from "./src/navigation";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import { ThemeProvider, createTheme } from "@rneui/themed";
+
+const theme = createTheme({
+  components: {
+    Button: {
+      titleStyle: {
+        color: 'blue',
+      },
+    },
+  },
+  lightColors: {
+    primary: "#e7e7e8",
+  },
+  darkColors: {
+    primary: "#000",
+  },
+  mode: "light",
+});
 
 export default function Main() {
   return (
-    <PaperProvider>
-      <AppNavigator />
-    </PaperProvider>
+    <>
+      <ThemeProvider theme={theme}>
+        <SafeAreaProvider>
+          <AppNavigator />
+        </SafeAreaProvider>
+      </ThemeProvider>
+    </>
   );
 }
-
-AppRegistry.registerComponent(appName, () => Main);
