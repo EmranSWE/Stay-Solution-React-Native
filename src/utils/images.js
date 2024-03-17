@@ -7,6 +7,7 @@ import onboard6 from "../assets/images/onboard6.png";
 import onboard7 from "../assets/images/onboard7.png";
 import onboard8 from "../assets/images/onboard8.png";
 import onboard9 from "../assets/images/onboard9.png";
+import avatar from "../assets/images/avater.png";
 
 const images = {
   onboard1,
@@ -18,6 +19,7 @@ const images = {
   onboard7,
   onboard8,
   onboard9,
+  avatar
 };
 
 export default images;

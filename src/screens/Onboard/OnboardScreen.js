@@ -96,7 +96,7 @@ const OnboardScreen = () => {
             width: "full",
             marginBottom: 20,
           }}
-          onPress={() => navigation.navigate("Home")}
+          onPress={() => navigation.navigate("Profile")}
         />
       </ScrollView>
     </View>

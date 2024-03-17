@@ -5,6 +5,7 @@ import HomeScreen from "../screens/Home";
 import OnboardScreen from "../screens/Onboard";
 import LoginScreen from "../screens/Login";
 import SignUpScreen from "../screens/SignUp";
+import ProfileScreen from "../screens/Profile/ProfileScreen";
 // import LoginScreen from "../screens/Login";
 
 const Stack = createNativeStackNavigator();
@@ -31,6 +32,11 @@ const AppNavigator = () => {
           name="SignUp"
           component={SignUpScreen}
           options={{ title: " Welcome To SignUp Page" }}
+        />
+          <Stack.Screen
+          name="Profile"
+          component={ProfileScreen}
+          options={{ title: " Welcome To Profile" }}
         />
       </Stack.Navigator>
     </NavigationContainer>
